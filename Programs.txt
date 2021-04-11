@@ -1,0 +1,45 @@
+1/Sample programme for palindrome number : A palindrome number is a number that is same after reverse. For example, 545, 151, 34543, 343, 171, 48984 are the palindrome numbers. It can also be a string like LOL, MADAM etc.
+// to find String is palindrome or not:
+string=input('enter your sting: ')
+rev=string[::-1]
+if rev==string:
+    print(rev,'palindrome')
+else:
+    print(rev,'is not palindrome')
+
+// to find num is palindrome or not:
+n=int(input('enter your number:'))
+rev=0
+x=n
+while(n>0):
+    rev=(rev*10)+n%10
+    n=n//10
+if x==rev:
+    print(rev,'is palindrome')
+else:
+    print(rev,'is not palindrome')
+
+2/Armstrong Number in Java: A positive number is called armstrong number if it is equal to the sum of cubes of its digits for example 0, 1, 153, 370, 371, 407 etc.
+
+Let's try to understand why 153 is an Armstrong number.
+
+number=int(input('enter your number: '))
+def check_armstrom(num):
+    if num in range(1,10):
+        return True
+    order =len(str(num))
+    sum=0
+    original=num
+
+    while num>0:
+        digit=num%10
+        sum+=digit ** order
+        num=num // 10
+    if sum==original:
+        return True
+    return False
+if check_armstrom(number):
+    print(number,'is armstrong')
+else:
+    print(number ,'is not armstrom')
+
